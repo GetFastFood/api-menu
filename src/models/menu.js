@@ -4,10 +4,9 @@ const menu_schema = new Schema({
     id: Schema.Types.ObjectId, 
     name: String,
     description: String,
-    Category: String,
-    price: Array,
-    image: Object,
-    items: Array,      
+    category: String,
+    content: Array,
+    price: Number,   
     versionKey: false
 });
 
