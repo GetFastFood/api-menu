@@ -12,6 +12,10 @@ router.get('/:id',function(req,res){
     menuController.getmenuById(req,res);
 });
 
+router.get('/restaurant/:id',function(req,res){
+    menuController.getByRestaurantId(req,res);
+});
+
 // POST /api/v1/menu
 router.post('/',function(req,res){
     menuController.createmenu(req,res);

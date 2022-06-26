@@ -22,6 +22,15 @@ let menuController = {
         }
     },
 
+    async getByRestaurantId(req, res) {
+        try {
+            let restomenu = await menu.find({restaurantId: req.params.id});
+            send.sendData(res, restomenu);
+        }catch (err) {
+            send.sendData(res, 500, err);
+        }
+    },
+
     async createmenu(req, res) {
         try {
             let restomenu = await menu.create(req.body);
